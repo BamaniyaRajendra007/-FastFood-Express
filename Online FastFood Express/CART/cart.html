@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Online FastFood Express</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../Login page/LOGO.png">
+            <span>Online FastFood Express</span>
+        </div>
+        <nav class="navbar">
+            <a href="../home/index.html">Home</a>
+            <a href="../menu/menu.html">Menu</a>
+            <a href="cart.html">🛒 Cart</a>
+            <a href="../TRACK ORDER/tracking.html">Track Order</a>
+              <a href="../login page/login.html">👤 Login</a>
+        </nav>
+    </header>
+    <main class="cart-section">
+        <h1>🛒 Your Cart</h1>
+        <div id="cartItems"></div>
+        <div class="cart-total">
+            <h2>
+                Total: ₹<span id="cartTotal">0</span>
+            </h2>
+        </div>
+        <button type="button" id="orderNowButton">
+            Order Now
+        </button>
+        <div id="checkoutSection" style="display: none;">
+            <h2>📦 Delivery Details</h2>
+            <p>Please enter your delivery information.</p>
+            <form id="deliveryForm">
+                <label for="customerName">Full Name</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter Your Full Name"
+                    required
+                >
+                <label for="mobileNumber">Mobile Number</label>
+                <input
+                    type="tel"
+                    id="mobileNumber"
+                    placeholder="Enter 10 Digit Mobile Number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+                <label for="deliveryAddress">Full Address</label>
+                <textarea
+                    id="deliveryAddress"
+                    placeholder="House No, Street, Area, Landmark"
+                    required>
+                </textarea>
+                <label for="city">City</label>
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="Enter Your City"
+                    required>
+                <label for="pincode">Pincode</label>
+                <input
+                    type="text"
+                    id="pincode"
+                    placeholder="Enter 6 Digit Pincode"
+                    pattern="[0-9]{6}"
+                    maxlength="6"
+                    required>
+                <div class="checkout-summary">
+                    <h3>Order Total: ₹<span id="checkoutTotal">0</span></h3>
+                </div>
+                <button type="submit" id="continuePaymentButton">
+                    Continue Payment
+                </button>
+            </form>
+        </div>
+        <section class="payment-section"
+        id="paymentSection"
+        style="display: none;">
+            <h2>💳 Select Payment Method</h2>
+            <p class="payment-description">
+                Choose your preferred payment option.
+            </p>
+            <form id="paymentForm">
+                <label class="payment-option">
+                    <input type="radio"
+                    name="paymentMethod"
+                    value="UPI"
+                    required>
+                    <span class="payment-icon">📱</span>
+                    <span>
+                        <strong>UPI Payment</strong>
+                        <small>Google Pay, Paytm, PhonePe</small>
+                    </span>
+                </label>
+                <div id="upiApps"
+                class="upi-apps"
+                style="display: none;">
+                    <label class="upi-option">
+                        <input type="radio"
+                        name="upiApp"
+                        value="Google Pay">
+                        <img src="../CART/icons8-google-pay-48.png"
+                        alt="Google Pay">
+                        <span>Google Pay</span>
+                    </label>
+                    <label class="upi-option">
+                        <input type="radio"
+                        name="upiApp"
+                        value="PhonePe">
+                        <img src="../CART/icons8-phone-pe-48.png"
+                        alt="PhonePe">
+                        <span>PhonePe</span>
+                    </label>
+                    <label class="upi-option">
+                        <input type="radio"
+                        name="upiApp"
+                        value="Paytm">
+                        <img src="../CART/icons8-paytm-94.png"
+                        alt="Paytm">
+                        <span>Paytm</span>
+                    </label>
+                </div>
+                <label class="payment-option">
+                    <input type="radio"
+                    name="paymentMethod"
+                    value="Debit/Credit Card">
+                    <span class="payment-icon">💳</span>
+                    <span>
+                        <strong>Debit / Credit Card</strong>
+                        <small>Pay using your bank card</small>
+                    </span>
+                </label>
+                <div id="cardDetails" style="display: none;">
+                    <h3>Debit Card Details</h3>
+                    <label>Card holder name</label>
+                    <input type="text"
+                    placeholder="Demo only - do not enter real card details">
+                    <p>
+                        Demo form only. Do not enter real card details.
+                    </p>
+                </div>
+                <label class="payment-option">
+                    <input type="radio"
+                    name="paymentMethod"
+                    value="Cash on Delivery">
+                    <span class="payment-icon">💵</span>
+                    <span>
+                        <strong>Cash on Delivery</strong>
+                        <small>Pay when your food arrives</small>
+                    </span>
+                </label>
+                <button type="submit" id="placeOrderButton">
+                    Place Order
+                </button>
+            </form>
+            <p class="demo-note">
+                Note: This is a demo payment system.
+                No real payment will be charged.
+            </p>
+        </section>
+    </main>
+    <script src="cart.js"></script>
+</body>
+</html>

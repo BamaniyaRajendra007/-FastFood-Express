@@ -1,0 +1,209 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #fff5f5;
+    color: #000;
+}
+.header {
+    padding: 20px 7%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.navbar {
+    display: flex;
+    gap: 25px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+.navbar a:hover {
+    color: #e63946;
+}
+.tracking-section {
+    width: 550px;
+    max-width: 90%;
+    margin: 70px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.25);
+    text-align: center;
+}
+.tracking-section h1 {
+    color: #c62828;
+    margin-bottom: 15px;
+}
+.tracking-section p {
+    color: #000;
+    margin-bottom: 25px;
+}
+.tracking-section input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.tracking-section input:focus {
+    outline: none;
+    border-color: #e63946;
+}
+.tracking-section button {
+    width: 100%;
+    padding: 14px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tracking-section button:hover {
+    background: #c62828;
+}
+#trackingResult {
+    margin-top: 25px;
+    text-align: left;
+}
+.tracking-card {
+    background: #fff5f5;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffd6d6;
+}
+.tracking-card h2 {
+    color: #c62828;
+    margin-bottom: 15px;
+}
+.tracking-card p {
+    margin: 12px 0;
+}
+#reviewSection {
+    display: none;
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ffd6d6;
+    box-shadow: 0 5px 20px rgba(230, 57, 70, 0.15);
+    text-align: left;
+}
+#reviewSection h2 {
+    color: #c62828;
+    text-align: center;
+    margin-bottom: 12px;
+}
+#reviewSection p {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#reviewForm label {
+    font-weight: bold;
+    color: #333;
+}
+.rating-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.rating-stars input {
+    display: none;
+}
+.rating-stars label {
+    font-size: 35px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.rating-stars label:hover,
+.rating-stars label:hover ~ label,
+.rating-stars input:checked ~ label {
+    color: #ffb400;
+}
+#reviewForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+#reviewForm textarea:focus {
+    outline: none;
+    border-color: #e63946;
+}
+#reviewForm button {
+    width: 100%;
+    padding: 14px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#reviewForm button:hover {
+    background: #c62828;
+}
+#reviewMessage {
+    margin-top: 15px;
+    color: #248a45;
+    font-weight: bold;
+    text-align: center;
+}
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tracking-section {
+        padding: 20px;
+    }
+
+    #reviewSection {
+        padding: 18px;
+    }
+}

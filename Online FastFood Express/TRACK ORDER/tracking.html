@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Order - FastFood Express</title>
+
+    <link rel="stylesheet" href="tracking.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="../Login page/LOGO.png">
+            FastFood Express
+        </div>
+        <nav class="navbar">
+            <a href="../home/index.html">Home</a>
+            <a href="../menu/menu.html">Menu</a>
+            <a href="../cart/cart.html">Cart</a>
+            <a href="tracking.html">Track Order</a>
+        </nav>
+    </header>
+    <section class="tracking-section">
+        <h1>📦 Track Your Order</h1>
+        <p>Enter your Tracking ID or Order ID to check your order status.</p>
+        <form id="trackingForm">
+            <input
+                type="text"
+                id="orderId"
+                placeholder="Enter Tracking ID or Order ID"
+                autocomplete="off"
+                required
+            >
+            <button type="submit">
+                Track Order
+            </button>
+        </form>
+        <div id="trackingResult"></div>
+        <div id="reviewSection" style="display: none;">
+            <h2>⭐ Rate Your Experience</h2>
+            <p>
+                Your order has been delivered!
+                Please share your feedback.
+            </p>
+            <form id="reviewForm">
+                <label>Your Rating</label>
+                <div class="rating-stars">
+                    <input type="radio" name="rating" value="5" id="star5">
+                    <label for="star5">★</label>
+                    <input type="radio" name="rating" value="4" id="star4">
+                    <label for="star4">★</label>
+                    <input type="radio" name="rating" value="3" id="star3">
+                    <label for="star3">★</label>
+                    <input type="radio" name="rating" value="2" id="star2">
+                    <label for="star2">★</label>
+                    <input type="radio" name="rating" value="1" id="star1">
+                    <label for="star1">★</label>
+                </div>
+                <label for="customerReview">
+                    Write Your Review
+                </label>
+                <textarea
+                    id="customerReview"
+                    placeholder="Share your experience..."
+                    rows="4"
+                    required
+                ></textarea>
+                <button type="submit">
+                    Submit Review
+                </button>
+            </form>
+            <div id="reviewMessage"></div>
+        </div>
+    </section>
+    <script src="tracking.js"></script>
+</body>
+</html>
